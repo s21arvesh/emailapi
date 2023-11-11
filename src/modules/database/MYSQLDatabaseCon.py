@@ -1,7 +1,7 @@
 from flask import g, current_app as app
 import pymysql
 from sqlalchemy import create_engine
-
+# this is the change
 
 def get_db():
     if 'db' not in g:
