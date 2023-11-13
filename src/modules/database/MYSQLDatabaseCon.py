@@ -25,7 +25,7 @@ def connect_to_database():
 
     g.db['dbConnObj'] = con
     g.db['dbConnCur'] = cur
-    g.db['dbConnEnf'] = engine
+    g.db['dbConnEng'] = engine
     return
 
 

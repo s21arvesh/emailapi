@@ -1,13 +1,16 @@
 from flask import Flask, request, current_app as app
 from flask_mail import Mail, Message
 import re
-
+from src.modules.database.dbProcessor import dbProcess
 
 class SendEmail:
 
     def email_main(self, req_json):
         output_validate_json = self.validate_json(req_json)
-        return output_validate_json
+        if 'status' in output_validate_json and output_validate_json['status'] == 'failure':
+            return output_validate_json
+        # output_db_entry = self.db_entry(output_validate_json, req_json)
+        return 'output_db_entry'
 
     def validate_json(self, req_json):
         app.logger.info(f'request_json validation starts here')
@@ -65,3 +68,23 @@ class SendEmail:
                 return {"status": "failure", "message": f' invalid {mail_type} format', "data": ids}
         else:
             return {"status": "success", "message": " pattern validated successfully"}
+
+    def send_email(self, toEmailAddress=[], ccEmailAddress=[], subjectLine=None, EmailBody=None,
+                   fromEmailAddress=None, filePath=None, htmlEmailBody=None, mimeType=None, bccEmailAddress=[]):
+        try:
+            mail = Mail(app)
+            msg = Message(subjectLine, sender=fromEmailAddress, recipients=toEmailAddress, cc=ccEmailAddress,
+                          bcc=bccEmailAddress)
+            msg.body = EmailBody
+            msg.html = htmlEmailBody
+        except Exception as e:
+            return
+
+    """
+    def db_entry(self, output_validate_json, req_json):
+        obj_db = dbProcess('email', select_column_list=['send_to_email_id', 'send_by_email_id'],
+                           val_dict_data={'send_to_email_id': req_json['to_email_addr'],
+                                          'send_by_email_id': req_json['cc_email_addr']})
+        insert_output = obj_db.insert_query()
+        return {"status": "success", "message": " data inserted successfully"}
+    """

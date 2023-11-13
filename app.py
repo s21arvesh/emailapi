@@ -3,6 +3,7 @@ import logging
 import os
 import FlaskServiceImpl
 from src.modules.database import MYSQLDatabaseCon
+
 logging.basicConfig(filename="log/flask_logs.log", format="%(asctime)s { %(filename)s [ %(funcName)s : %(lineno)d] } "
                                                           "%(levelname)s : %(message)s ")
 
@@ -38,6 +39,7 @@ def home():
 def send_email():
     resp = FlaskServiceImpl.fn_send_email(request.json)
     return resp
+
 
 @app.before_request
 def before_request_func():
