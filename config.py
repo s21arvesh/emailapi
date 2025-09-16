@@ -2,10 +2,11 @@ class config(object):
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = '587'
     MAIL_USERNAME = 'sarveshmestry01@gmail.com'
-    MAIL_PASSWORD = 'cvve orel jpnu sfwe'
+    MAIL_PASSWORD = 'xyz'
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
     MAIL_DEFAULT_SENDER = 'no-reply@gmail.com'
+
 
 
 class ProductionConfig(config):
