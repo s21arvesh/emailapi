@@ -1,90 +1,49 @@
-2023-11-13 13:38:03,613 { _internal.py [ _log : 96] } INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-09-13 22:27:55,834 { json_schema_validator.py [ wrapper : 30] } DEBUG : JSON schema validation done for --->> {'type': 'object', 'properties': {'to_email_addr': {'type': 'array', 'errorMessage': {'type': 'to email address should be in a list'}}}}  
+2025-09-13 22:27:55,839 { json_schema_validator.py [ wrapper : 48] } DEBUG : JSON schema validation done for --->> send_email  
+2025-09-13 22:27:55,852 { sendemail.py [ send_email : 37] } INFO : before_msg 
+2025-09-13 22:27:55,852 { sendemail.py [ send_email : 44] } INFO : inside exception - [Errno 61] Connection refused 
+2025-09-13 22:27:55,854 { _internal.py [ _log : 97] } INFO : 127.0.0.1 - - [13/Sep/2025 22:27:55] "GET /send_email HTTP/1.1" 200 - 
+2025-09-13 22:36:39,736 { _internal.py [ _log : 97] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/be_project_file/py-flask-structure/config.py', reloading 
+2025-09-13 22:36:40,592 { _internal.py [ _log : 97] } INFO :  * Restarting with stat 
+2025-09-13 22:38:46,983 { _internal.py [ _log : 97] } INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8000
- * Running on http://192.168.0.105:8000 
-2023-11-13 13:38:03,613 { _internal.py [ _log : 96] } INFO : [33mPress CTRL+C to quit[0m 
-2023-11-13 13:38:03,614 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:38:03,940 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:38:03,958 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:38:29,261 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/project_py/sendemail.py', reloading 
-2023-11-13 13:38:29,313 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:38:29,674 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:38:29,685 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:38:30,452 { sendemail.py [ validate_json : 19] } INFO : request_json validation starts here 
-2023-11-13 13:38:30,452 { sendemail.py [ validate_json : 23] } INFO : email_list validation starts here 
-2023-11-13 13:38:30,452 { sendemail.py [ email_validation : 42] } INFO : email validation starts here 
-2023-11-13 13:38:30,466 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 13:38:30] "[35m[1mGET /send_email HTTP/1.1[0m" 500 - 
-2023-11-13 13:40:42,436 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/project_py/sendemail.py', reloading 
-2023-11-13 13:40:42,503 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:40:42,886 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:40:42,900 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:40:42,938 { sendemail.py [ validate_json : 24] } INFO : request_json validation starts here 
-2023-11-13 13:40:42,938 { sendemail.py [ validate_json : 28] } INFO : email_list validation starts here 
-2023-11-13 13:40:42,938 { sendemail.py [ email_validation : 47] } INFO : email validation starts here 
-2023-11-13 13:40:42,946 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 13:40:42] "[35m[1mGET /send_email HTTP/1.1[0m" 500 - 
-2023-11-13 13:41:19,369 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/project_py/sendemail.py', reloading 
-2023-11-13 13:41:19,436 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:41:19,833 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:41:19,846 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:45:53,556 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/project_py/sendemail.py', reloading 
-2023-11-13 13:45:53,634 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:45:54,016 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:45:54,028 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:45:54,261 { sendemail.py [ validate_json : 19] } INFO : request_json validation starts here 
-2023-11-13 13:45:54,262 { sendemail.py [ validate_json : 23] } INFO : email_list validation starts here 
-2023-11-13 13:45:54,262 { sendemail.py [ email_validation : 42] } INFO : email validation starts here 
-2023-11-13 13:45:54,271 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 13:45:54] "[35m[1mGET /send_email HTTP/1.1[0m" 500 - 
-2023-11-13 13:46:16,348 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/project_py/sendemail.py', reloading 
-2023-11-13 13:46:16,399 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:46:16,764 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:46:16,775 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:46:17,518 { sendemail.py [ validate_json : 19] } INFO : request_json validation starts here 
-2023-11-13 13:46:17,518 { sendemail.py [ validate_json : 23] } INFO : email_list validation starts here 
-2023-11-13 13:46:17,518 { sendemail.py [ email_validation : 42] } INFO : email validation starts here 
-2023-11-13 13:46:17,531 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 13:46:17] "[35m[1mGET /send_email HTTP/1.1[0m" 500 - 
-2023-11-13 13:50:31,268 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/project_py/sendemail.py', reloading 
-2023-11-13 13:50:31,355 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:50:48,877 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:50:48,891 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:50:48,927 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 13:50:48,927 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 13:50:48,927 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 13:50:48,932 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 13:50:48] "[35m[1mGET /send_email HTTP/1.1[0m" 500 - 
-2023-11-13 13:51:29,654 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/database/MYSQLDatabaseCon.py', reloading 
-2023-11-13 13:51:29,734 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
-2023-11-13 13:51:30,295 { _internal.py [ _log : 96] } WARNING :  * Debugger is active! 
-2023-11-13 13:51:30,307 { _internal.py [ _log : 96] } INFO :  * Debugger PIN: 516-855-655 
-2023-11-13 13:51:30,617 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 13:51:30,618 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 13:51:30,618 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 13:51:30,634 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 13:51:30] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 14:53:25,706 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 14:53:25,708 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 14:53:25,708 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 14:53:25,714 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 14:53:25] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 14:53:48,272 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 14:53:48,273 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 14:53:48,273 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 14:53:48,276 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 14:53:48] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 14:54:06,770 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 14:54:06,771 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 14:54:06,771 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 14:54:06,773 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 14:54:06] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 14:57:45,700 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 14:57:45,701 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 14:57:45,702 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 14:57:45,714 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 14:57:45] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 14:57:51,661 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 14:57:51,661 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 14:57:51,661 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 14:57:51,663 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 14:57:51] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 14:57:59,462 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 14:57:59,462 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 14:57:59,462 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 14:57:59,464 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 14:57:59] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 14:59:06,255 { sendemail.py [ validate_json : 16] } INFO : request_json validation starts here 
-2023-11-13 14:59:06,257 { sendemail.py [ validate_json : 20] } INFO : email_list validation starts here 
-2023-11-13 14:59:06,257 { sendemail.py [ email_validation : 39] } INFO : email validation starts here 
-2023-11-13 14:59:06,259 { _internal.py [ _log : 96] } INFO : 127.0.0.1 - - [13/Nov/2023 14:59:06] "GET /send_email HTTP/1.1" 200 - 
-2023-11-13 15:12:28,581 { _internal.py [ _log : 96] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/project_file/py-flask-structure/src/modules/project_py/sendemail.py', reloading 
-2023-11-13 15:12:28,718 { _internal.py [ _log : 96] } INFO :  * Restarting with stat 
+ * Running on http://192.168.0.107:8000 
+2025-09-13 22:38:46,983 { _internal.py [ _log : 97] } INFO : [33mPress CTRL+C to quit[0m 
+2025-09-13 22:38:46,984 { _internal.py [ _log : 97] } INFO :  * Restarting with stat 
+2025-09-13 22:38:47,528 { _internal.py [ _log : 97] } WARNING :  * Debugger is active! 
+2025-09-13 22:38:47,553 { _internal.py [ _log : 97] } INFO :  * Debugger PIN: 722-700-029 
+2025-09-13 22:38:59,048 { json_schema_validator.py [ wrapper : 30] } DEBUG : JSON schema validation done for --->> {'type': 'object', 'properties': {'to_email_addr': {'type': 'array', 'errorMessage': {'type': 'to email address should be in a list'}}}}  
+2025-09-13 22:38:59,059 { json_schema_validator.py [ wrapper : 48] } DEBUG : JSON schema validation done for --->> send_email  
+2025-09-13 22:38:59,260 { sendemail.py [ send_email : 37] } INFO : before_msg 
+2025-09-13 22:39:01,927 { sendemail.py [ send_email : 44] } INFO : inside exception - (534, b'5.7.9 Application-specific password required. For more information, go to\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 41be03b00d2f7-b54a36dc461sm7602646a12.23 - gsmtp') 
+2025-09-13 22:39:01,929 { _internal.py [ _log : 97] } INFO : 127.0.0.1 - - [13/Sep/2025 22:39:01] "GET /send_email HTTP/1.1" 200 - 
+2025-09-13 22:43:23,787 { _internal.py [ _log : 97] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/be_project_file/py-flask-structure/config.py', reloading 
+2025-09-13 22:43:23,955 { _internal.py [ _log : 97] } INFO :  * Restarting with stat 
+2025-09-13 22:43:24,910 { _internal.py [ _log : 97] } WARNING :  * Debugger is active! 
+2025-09-13 22:43:24,936 { _internal.py [ _log : 97] } INFO :  * Debugger PIN: 722-700-029 
+2025-09-13 22:43:26,520 { json_schema_validator.py [ wrapper : 30] } DEBUG : JSON schema validation done for --->> {'type': 'object', 'properties': {'to_email_addr': {'type': 'array', 'errorMessage': {'type': 'to email address should be in a list'}}}}  
+2025-09-13 22:43:26,530 { json_schema_validator.py [ wrapper : 48] } DEBUG : JSON schema validation done for --->> send_email  
+2025-09-13 22:43:26,539 { sendemail.py [ send_email : 37] } INFO : before_msg 
+2025-09-13 22:43:28,522 { sendemail.py [ send_email : 44] } INFO : inside exception - (534, b'5.7.9 Application-specific password required. For more information, go to\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 98e67ed59e1d1-32dd982478bsm9345466a91.12 - gsmtp') 
+2025-09-13 22:43:28,524 { _internal.py [ _log : 97] } INFO : 127.0.0.1 - - [13/Sep/2025 22:43:28] "GET /send_email HTTP/1.1" 200 - 
+2025-09-13 22:53:25,370 { _internal.py [ _log : 97] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/be_project_file/py-flask-structure/config.py', reloading 
+2025-09-13 22:53:25,541 { _internal.py [ _log : 97] } INFO :  * Restarting with stat 
+2025-09-13 22:53:26,486 { _internal.py [ _log : 97] } WARNING :  * Debugger is active! 
+2025-09-13 22:53:26,510 { _internal.py [ _log : 97] } INFO :  * Debugger PIN: 722-700-029 
+2025-09-13 22:53:26,524 { json_schema_validator.py [ wrapper : 30] } DEBUG : JSON schema validation done for --->> {'type': 'object', 'properties': {'to_email_addr': {'type': 'array', 'errorMessage': {'type': 'to email address should be in a list'}}}}  
+2025-09-13 22:53:26,525 { json_schema_validator.py [ wrapper : 48] } DEBUG : JSON schema validation done for --->> send_email  
+2025-09-13 22:53:26,536 { sendemail.py [ send_email : 37] } INFO : before_msg 
+2025-09-13 22:53:30,062 { sendemail.py [ send_email : 39] } INFO : after_msg 
+2025-09-13 22:53:30,063 { sendemail.py [ send_email : 41] } INFO : !!!!! mail sent successfully !!!!! 
+2025-09-13 22:53:30,065 { _internal.py [ _log : 97] } INFO : 127.0.0.1 - - [13/Sep/2025 22:53:30] "GET /send_email HTTP/1.1" 200 - 
+2025-09-13 22:54:55,447 { _internal.py [ _log : 97] } INFO :  * Detected change in '/Users/sarvesh_21/Documents/be_project_file/py-flask-structure/config.py', reloading 
+2025-09-13 22:54:55,583 { _internal.py [ _log : 97] } INFO :  * Restarting with stat 
+2025-09-13 22:54:56,300 { _internal.py [ _log : 97] } WARNING :  * Debugger is active! 
+2025-09-13 22:54:56,319 { _internal.py [ _log : 97] } INFO :  * Debugger PIN: 722-700-029 
+2025-09-13 22:54:59,126 { json_schema_validator.py [ wrapper : 30] } DEBUG : JSON schema validation done for --->> {'type': 'object', 'properties': {'to_email_addr': {'type': 'array', 'errorMessage': {'type': 'to email address should be in a list'}}}}  
+2025-09-13 22:54:59,133 { json_schema_validator.py [ wrapper : 48] } DEBUG : JSON schema validation done for --->> send_email  
+2025-09-13 22:54:59,146 { sendemail.py [ send_email : 37] } INFO : before_msg 
+2025-09-13 22:55:02,387 { sendemail.py [ send_email : 39] } INFO : after_msg 
+2025-09-13 22:55:02,387 { sendemail.py [ send_email : 41] } INFO : !!!!! mail sent successfully !!!!! 
+2025-09-13 22:55:02,390 { _internal.py [ _log : 97] } INFO : 127.0.0.1 - - [13/Sep/2025 22:55:02] "GET /send_email HTTP/1.1" 200 - 

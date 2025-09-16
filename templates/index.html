@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+</head>
+<body>
+    <h1>Submit Form</h1>
+    <form id="myForm">
+        <!-- Add your form fields here -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Serialize form data
+            const formData = new FormData(event.target);
+
+            // Make an AJAX request to the /submit endpoint
+            fetch('/submit', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the message on the page
+                document.getElementById('message').innerText = data.message;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

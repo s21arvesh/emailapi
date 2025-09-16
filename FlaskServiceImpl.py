@@ -19,3 +19,9 @@ def fn_send_email(req_json):
     obj_send_email = SendEmail()
     result = obj_send_email.email_main(req_json)
     return result
+
+
+def fn_frontend_form():
+    obj_Frontend = Frontend()
+    result = obj_Frontend.frontend_main()
+    return result

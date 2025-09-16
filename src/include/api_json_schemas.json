@@ -1,0 +1,16 @@
+{
+  "schema": {
+    "send_email": {
+      "type": "object",
+      "properties": {
+        "to_email_addr": {
+          "type": "array",
+          "errorMessage": {
+            "type": "to email address should be in a list"
+          }
+        }
+      }
+    },
+    "required": ["to_email_addr"]
+  }
+}
